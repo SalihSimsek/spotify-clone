@@ -11,7 +11,7 @@ import Player from "./components/Player";
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ user, token,playlists }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -30,11 +30,17 @@ function App() {
           user: user,
         });
       });
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists,
+        });
+      });
     }
     console.log("token: ", token);
-  }, [user, dispatch]);
+  }, [token, dispatch]);
 
-  return <div className="app">{token ? <Player spotify={spotify}/> : <Login />}</div>;
+  return <div className="app">{token ? <Player spotify={spotify} /> : <Login />}</div>;
 }
 
 export default App;
