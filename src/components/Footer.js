@@ -12,6 +12,8 @@ import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import { Grid, Slider } from "@material-ui/core";
 
 const Footer = () => {
+
+
   return (
     <div className="footer">
       <div className="footer_left">

@@ -6,4 +6,68 @@
     background: linear-gradient(
         rgba(91,87,115),rgba(0,0,0,1)
     );
+    overflow-y: overlay;
+}
+
+.body::-webkit-scrollbar{
+    display: none;
+}
+
+.body_info{
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+.body_info img{
+    height: 20vw;
+    margin: 0 2rem;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.body_infoText{
+    flex: 1;
+}
+
+.body_infoText h2{
+    font-size: 4.8rem;
+}
+
+.body_infoText strong{
+    font-size: 1.6rem;
+}
+
+.body_infoText p{
+    font-size: 1.4rem;
+}
+
+
+.body_icons{
+    display: flex;
+    align-items: center;
+}
+
+.body_icons .MuiSvgIcon-root{
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+
+.body_shuffle{
+    font-size: 8rem !important;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.body_shuffle:hover{
+    transition: 0.1s transform ease-in;
+    transform: scale(1.08);
+}
+
+.body_song{
+    margin: 2rem -3rem;
+}
+
+.body_fav{
+    font-size: 3.5rem !important;
 }
