@@ -2,9 +2,9 @@ import React from "react";
 
 import "../styles/SongRow.css";
 
-const SongRow = ({ track }) => {
+const SongRow = ({ track, playSong }) => {
   return (
-    <div className="songRow">
+    <div className="songRow" onClick={() => playSong(track.id)}>
       <img className="songRow_album" src={track?.album?.images[0]?.url} alt="" />
       <div className="songRow_info">
         <h1>{track.name}</h1>

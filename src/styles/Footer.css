@@ -63,3 +63,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.volume{
+    max-width: 15rem !important;
+}
